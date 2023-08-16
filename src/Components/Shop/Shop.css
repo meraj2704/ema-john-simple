@@ -12,9 +12,10 @@
 
 .cart-container {
     width: 264px;
-    height: 100%;
+    height: 600px;
     right: 0;
     background-color: #FF99004D;
     position: fixed;
+    border-radius: 20px;
 }
 
