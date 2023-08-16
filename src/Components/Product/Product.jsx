@@ -3,8 +3,11 @@ import './Product.css'
 import { Tilt } from 'react-tilt'
 
 const Product = (props) => {
-    const { img, name, price, seller, ratings } = props.product;
+    const product = props.product;
+    
+    const { img, name, price, seller, ratings } = product;
     const handleAddToCart = props.handleAddToCart;
+    // console.log(handleAddToCart)
     return (
         <Tilt>
             <div className='product'>
@@ -15,7 +18,7 @@ const Product = (props) => {
                     <p className='product-mr'>Manufacturer : {seller}</p>
                     <p className='product-mr'>Rating : {ratings}</p>
                 </div>
-                <button className='product-btn' onClick={() => handleAddToCart(props.product)}>Add to Cart</button>
+                <button className='product-btn' onClick={() => handleAddToCart(product)}>Add to Cart</button>
             </div>
         </Tilt>
     );

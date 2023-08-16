@@ -7,10 +7,10 @@ function App() {
 
 
   return (
-    <>
+    <div>
       <Header></Header>
       <Shop></Shop>
-    </>
+    </div>
   )
 }
 
