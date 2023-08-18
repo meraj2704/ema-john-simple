@@ -12,6 +12,9 @@
     z-index: 1000;
     
 }
+.menu-div{
+    margin-right: 150px;
+}
 nav.header a{
     color: #FFF ;
     margin-left: 30px;
