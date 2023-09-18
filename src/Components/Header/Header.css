@@ -8,8 +8,8 @@
     padding-bottom: 21px;
     padding-left: 112px;
     padding-right: 100px;
-    position: fixed;
-    z-index: 1000;
+    /* position: fixed; */
+    /* z-index: 1000; */
     
 }
 .menu-div{
