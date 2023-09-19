@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
 import Rivew from '../Rivew/Rivew';
 import './Orders.css'
-import { removeFromDb } from '../../utilities/fakedb';
+import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 const Orders = () => {
     const saveCart = useLoaderData();
     const [carts, setCart] = useState(saveCart);
@@ -14,6 +14,10 @@ const Orders = () => {
         setCart(remaining);
         removeFromDb(id);
         console.log(id);
+    }
+    const handleClearCart = ()=>{
+        setCart([]);
+        deleteShoppingCart();
     }
     return (
         <div className='shop-container '>
@@ -27,7 +31,10 @@ const Orders = () => {
                 }
             </div>
             <div className='cart-container cart'>
-                <Cart cart={carts}></Cart>
+                <Cart 
+                cart={carts}
+                handleClearCart = {handleClearCart}
+                ></Cart>
             </div>
         </div>
     );
