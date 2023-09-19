@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
-import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowAltCircleRight,faTrashCan,faCreditCard } from '@fortawesome/free-solid-svg-icons'
+import { Link, useLoaderData, useRouteLoaderData } from 'react-router-dom';
 import Rivew from '../Rivew/Rivew';
 import './Orders.css'
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
@@ -34,7 +36,11 @@ const Orders = () => {
                 <Cart 
                 cart={carts}
                 handleClearCart = {handleClearCart}
-                ></Cart>
+                >
+                    <Link to="/checkout">
+                    <button className='btn-review-order'><span className='btn-text'>Proceed Checkout</span> <span><FontAwesomeIcon icon={faCreditCard} /></span></button>
+                </Link>
+                </Cart>
             </div>
         </div>
     );

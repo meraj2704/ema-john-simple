@@ -1,11 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleRight, } from '@fortawesome/free-solid-svg-icons'
+import { faArrowAltCircleRight,faTrashCan,faCreditCard } from '@fortawesome/free-solid-svg-icons'
 import './Cart.css'
+import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
     const cart = props.cart;
-    const handleClearCart = props.handleClearCart
+    const handleClearCart = props.handleClearCart;
+    const children = props.children;
     let total =0;
     let totalShipping =0
     let quantity =0;
@@ -32,9 +34,11 @@ const Cart = (props) => {
             </div>
             <div className='btn-container'>
                 <button onClick={handleClearCart} className='btn-clear-cart'>
-                    <span className='btn-text'>Clear Cart</span>
+                    <span className='btn-text'>Clear Cart </span><span><FontAwesomeIcon icon={faTrashCan} /></span>
                 </button>
-                <button className='btn-review-order'><span className='btn-text'>Review Order</span> <FontAwesomeIcon icon={faArrowAltCircleRight} /></button>
+                {
+                children
+                }
             </div>
         </div>
     );

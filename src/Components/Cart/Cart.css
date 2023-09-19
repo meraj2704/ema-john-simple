@@ -46,6 +46,8 @@
     height: 48px;
     border-radius: 4px;
     background: #FF3030;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-review-order {
@@ -53,6 +55,8 @@
     height: 48px;
     border-radius: 4px;
     background: #F90;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-text {
