@@ -2,9 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-const Rivew = ({ product }) => {
+const Rivew = ({ product,removeCart }) => {
     // console.log(cart);
-    const { img, name, price, quantity } = product;
+    const { img, name, price, quantity,id } = product;
     return (
         <div className='rivew-item'>
             <img src={img} alt="" />
@@ -13,7 +13,7 @@ const Rivew = ({ product }) => {
                 <p>Price : <span className='price'>{price}$</span></p>
                 <p>Quantity : <span className='price'>{quantity}</span></p>
             </div>
-            <button className='remove'><FontAwesomeIcon className='icon' icon={faTrashCan} /></button>
+            <button onClick={()=>removeCart(id)} className='remove'><FontAwesomeIcon className='icon' icon={faTrashCan} /></button>
         </div>
     );
 };
