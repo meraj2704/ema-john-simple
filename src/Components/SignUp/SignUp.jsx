@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './SignUp.css'
 import { Link } from 'react-router-dom';
 import google from '../../images/google.svg'
+import { AuthContext } from '../Providers/AuthProviders';
 
 const SignUp = () => {
     const [error, setError] = useState('');
+    const {createUser} = useContext(AuthContext);
     const handleSignUp = event => {
         event.preventDefault();
 
@@ -13,12 +15,23 @@ const SignUp = () => {
         const password = form.password.value;
         const confirm = form.confirm.value;
         console.log(email, password, confirm);
+        setError('');
         if (password !== confirm) {
             setError('Password not match');
         }
         else if (password.length < 6) {
             setError('Password must be minimum 6 characters');
         }
+
+        createUser(email,password)
+        .then(result =>{
+            const newUser = result.user;
+            console.log(newUser);
+            form.reset();
+        })
+        .catch(errorr =>{
+            setError(errorr.message);
+        })
     }
     return (
         <div className='signup-div'>
