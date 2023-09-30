@@ -8,3 +8,7 @@
     border: 1px solid #95A0A7;
     background: #FFF;
 }
+.error{
+    text-align: center;
+    color: red;
+}

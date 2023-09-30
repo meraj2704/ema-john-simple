@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../images/Logo.svg'
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const Header = () => {
+    const {user} = useContext(AuthContext)
     return (
         <nav className='header'>
             <img src={logo} alt="" />
