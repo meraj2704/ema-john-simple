@@ -7,6 +7,7 @@ import { AuthContext } from '../Providers/AuthProviders';
 const SignUp = () => {
     const [error, setError] = useState('');
     const {createUser,setUser} = useContext(AuthContext);
+    const [showPass,setShow] = useState(false);
     const handleSignUp = event => {
         event.preventDefault();
 
@@ -18,9 +19,11 @@ const SignUp = () => {
         setError('');
         if (password !== confirm) {
             setError('Password not match');
+            return;
         }
         else if (password.length < 6) {
             setError('Password must be minimum 6 characters');
+            return;
         }
 
         createUser(email,password)
@@ -44,11 +47,16 @@ const SignUp = () => {
                 </div>
                 <div>
                     <label className='label' htmlFor="password">Password</label>
-                    <input className='input-field' type="password" name='password' placeholder='password' />
+                    <input className='input-field' type={showPass ? 'text' : 'password'} name='password' placeholder='password' />
                 </div>
                 <div>
                     <label className='label' htmlFor="confirm">Confirm Password</label>
-                    <input className='input-field' type="password" name='confirm' placeholder='password' />
+                    <input className='input-field' type={showPass ? 'text' : 'password'} name='confirm' placeholder='password' />
+                    <p onClick={()=>setShow(!showPass)}>
+                        {
+                            showPass ? <span>Hide Password</span>: <span>Show Password</span>
+                        }
+                    </p>
                 </div>{
                     error && <p className='error'>{error}</p>
                 }
