@@ -10,7 +10,7 @@ const Header = () => {
         logOut()
         .then(()=>{
             console.log('Log Out successful')
-            setUser('');
+            // setUser('');
         })
         .catch(error =>{
             console.log(error, error.message)
