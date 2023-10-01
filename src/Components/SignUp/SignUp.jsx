@@ -6,7 +6,7 @@ import { AuthContext } from '../Providers/AuthProviders';
 
 const SignUp = () => {
     const [error, setError] = useState('');
-    const {createUser} = useContext(AuthContext);
+    const {createUser,setUser} = useContext(AuthContext);
     const handleSignUp = event => {
         event.preventDefault();
 
@@ -28,6 +28,7 @@ const SignUp = () => {
             const newUser = result.user;
             console.log(newUser);
             form.reset();
+            setUser(newUser);
         })
         .catch(errorr =>{
             setError(errorr.message);

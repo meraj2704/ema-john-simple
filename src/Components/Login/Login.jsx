@@ -5,7 +5,7 @@ import google from '../../images/google.svg'
 import { AuthContext } from '../Providers/AuthProviders';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {signIn,setUser} = useContext(AuthContext);
     const handleSignIn = event =>{
         event.preventDefault();
         const form = event.target;
@@ -17,6 +17,7 @@ const Login = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             form.reset();
+            setUser(loggedUser)
         })
         .catch(error =>{
             console.error(error, error.message);

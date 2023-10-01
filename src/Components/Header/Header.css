@@ -14,8 +14,15 @@
 }
 .menu-div{
     margin-right: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 nav.header a{
     color: #FFF ;
     margin-left: 30px;
+}
+.conditional-header{
+    display: flex;;
+
 }
