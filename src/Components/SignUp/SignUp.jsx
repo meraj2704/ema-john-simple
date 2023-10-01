@@ -28,7 +28,7 @@ const SignUp = () => {
             const newUser = result.user;
             console.log(newUser);
             form.reset();
-            setUser(newUser);
+            // setUser(newUser);
         })
         .catch(errorr =>{
             setError(errorr.message);
