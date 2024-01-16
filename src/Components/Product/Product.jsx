@@ -9,7 +9,6 @@ const Product = (props) => {
     const handleAddToCart = props.handleAddToCart;
     // console.log(handleAddToCart)
     return (
-        <Tilt>
             <div className='product'>
                 <img src={img} alt="" />
                 <div className='product-info'>
@@ -20,7 +19,6 @@ const Product = (props) => {
                 </div>
                 <button className='product-btn' onClick={() => handleAddToCart(product)}>Add to Cart</button>
             </div>
-        </Tilt>
     );
 };
 

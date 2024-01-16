@@ -1,72 +1,72 @@
-.order-summary {
-    color: #1C2B35;
-    text-align: center;
-    font-family: Lato;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
+/* .order-summary {
+  color: #1c2b35;
+  text-align: center;
+  font-family: Lato;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+} */
 
-.o-s-info {
-    margin-left: 23px;
-}
+/* .o-s-info {
+  margin-left: 23px;
+} */
 
-.o-s-d {
-    color: #2A414F;
-    /* Body 1 */
-    font-family: Lato;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.085px;
-}
+/* .o-s-d {
+  color: #2a414f;
+  /* Body 1 */
+  /* font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px; */
+/* }  */
 
-.g-t {
-    color: #0E161A;
-    font-family: Lato;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.032px;
-}
+/* .g-t {
+  color: #0e161a;
+  font-family: Lato;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.032px;
+} */
 
-.btn-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* .btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
 
-.btn-clear-cart {
-    margin-bottom: 16px;
-    width: 232px;
-    height: 48px;
-    border-radius: 4px;
-    background: #FF3030;
-    display: flex;
-    justify-content: space-between;
-}
+/* .btn-clear-cart {
+  margin-bottom: 16px;
+  width: 232px;
+  height: 48px;
+  border-radius: 4px;
+  background: #ff3030;
+  display: flex;
+  justify-content: space-between;
+} */
 
-.btn-review-order {
-    width: 232px;
-    height: 48px;
-    border-radius: 4px;
-    background: #F90;
-    display: flex;
-    justify-content: space-between;
-}
+/* .btn-review-order {
+  width: 232px;
+  height: 48px;
+  border-radius: 4px;
+  background: #f90;
+  display: flex;
+  justify-content: space-between;
+} */
 
 .btn-text {
-    color: #FFF;
+  /* color: #fff; */
 
-    /* Body 1 */
-    font-family: Lato;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.085px;
+  /* Body 1 */
+  /* font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px; */
 }

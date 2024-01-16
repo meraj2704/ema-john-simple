@@ -1,5 +1,5 @@
 .header{
-    width: 100%;
+    /* width: ; */
     background-color: #1C2B35;
     display: flex;
     justify-content: space-between;
@@ -25,4 +25,15 @@ nav.header a{
 .conditional-header{
     display: flex;;
 
+}
+
+@media screen and (max-width:600px) {
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header img{
+        width: 60px;
+        height: 60px;
+    }
 }
